@@ -11,7 +11,7 @@ resource "aws_cloudwatch_log_group" "this" {
 resource "aws_eks_cluster" "this" {
   count = var.create_eks ? 1 : 0
 
-  name                      = var.cluster_name
+  name                      = var.cluster_name_eks
   enabled_cluster_log_types = var.cluster_enabled_log_types
   role_arn                  = local.cluster_iam_role_arn
   version                   = var.cluster_version

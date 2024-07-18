@@ -22,6 +22,12 @@ variable "cluster_name" {
   default     = ""
 }
 
+variable "cluster_name_eks" {
+  description = "Name of the EKS cluster. Also used as a prefix in names of related resources."
+  type        = string
+  default     = ""
+}
+
 variable "cluster_security_group_id" {
   description = "If provided, the EKS cluster will be attached to this security group. If not given, a security group will be created with necessary ingress/egress to work with the workers"
   type        = string
